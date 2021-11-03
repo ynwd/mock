@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io/ioutil"
 	"log"
 
@@ -18,6 +19,7 @@ func main() {
 			log.Fatal(err)
 		}
 		bodyString := string(bodyBytes)
+		fmt.Println(bodyString)
 		res.Send(bodyString)
 	})
 	app.Listen(8080)
