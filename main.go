@@ -20,7 +20,7 @@ func main() {
 		}
 		bodyString := string(bodyBytes)
 		fmt.Println(bodyString)
-		res.Send("CALLBACK RESP:=======>" + bodyString + "<============")
+		res.Json(bodyString)
 	})
 	app.Listen(8080)
 }
